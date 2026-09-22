@@ -521,122 +521,132 @@ h1 {
   font-size: 14px;
 }
 
-.price-wrap {
-  max-width: 920px;
+.offer {
+  max-width: 760px;
   margin-inline: auto;
-  overflow-x: auto;
-  border: 1px solid rgba(61, 255, 122, 0.28);
-  border-radius: 24px;
-  background: var(--card);
-}
-
-.price-table {
-  width: 100%;
-  min-width: 680px;
-  border-collapse: collapse;
-}
-
-.price-table th,
-.price-table td {
-  padding: 18px 20px;
-  border-bottom: 1px solid var(--line);
+  padding: 34px 36px 30px;
+  border-radius: 28px;
+  border: 2px solid #d4f56e;
+  background:
+    radial-gradient(ellipse at 50% 0%, #f4ffe6 0%, #ffffff 58%);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.35);
   text-align: center;
-  vertical-align: middle;
+  color: #14200c;
 }
 
-.price-table thead th:first-child,
-.price-table tbody th,
-.price-table tfoot th {
-  text-align: left;
-  width: 34%;
-  color: #d5deea;
-  font-size: 15px;
-  font-weight: 700;
-}
-
-.price-table thead th {
-  padding-top: 28px;
-  padding-bottom: 22px;
-}
-
-.price-table thead th:nth-child(2),
-.price-table td:nth-child(2) {
-  background: rgba(61, 255, 122, 0.05);
-}
-
-.price-table tbody tr:last-child th,
-.price-table tbody tr:last-child td,
-.price-table tfoot th,
-.price-table tfoot td {
-  border-bottom: 0;
-}
-
-.price-badge,
-.price-kicker,
-.price-plan,
-.price-note {
-  display: block;
-}
-
-.price-badge,
-.price-kicker {
-  margin-bottom: 10px;
+.offer-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  color: #4d7a16;
   font-size: 12px;
   font-weight: 800;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
-.price-badge {
-  width: fit-content;
-  margin-inline: auto;
-  background: var(--green);
-  color: var(--ink);
+.offer-badge i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #b6e84a;
+  box-shadow: 0 0 0 4px rgba(182, 232, 74, 0.25);
+}
+
+.offer h2 {
+  max-width: 16em;
+  margin: 0 auto 18px;
+  color: #14200c;
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.offer-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 10px;
+  color: #10160c;
+}
+
+.offer-price span {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.offer-price strong {
+  font-family: Outfit, Manrope, sans-serif;
+  font-size: clamp(52px, 6vw, 72px);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 0.95;
+}
+
+.offer-cash {
+  margin-top: 6px;
+  color: #5d6758;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.offer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 28px;
+  margin: 26px 0 0;
+  text-align: left;
+}
+
+.offer-grid li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(20, 32, 12, 0.08);
+  color: #1c2418;
+  font-size: 14.5px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.offer-grid li::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  margin-top: 6px;
+  border-radius: 50%;
+  background: #b6e84a;
+  flex: none;
+}
+
+.offer-foot {
+  margin-top: 18px;
+  color: #6a7364;
+  font-size: 13px;
+}
+
+.offer-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 440px);
+  margin: 18px auto 0;
+  min-height: 56px;
+  padding: 14px 24px;
   border-radius: 999px;
-  padding: 5px 10px;
-}
-
-.price-kicker,
-.price-plan {
-  color: var(--green);
-}
-
-.price-plan {
-  font-size: 14px;
+  background: #c6f54a;
+  color: #14200c;
   font-weight: 800;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  font-size: 17px;
+  box-shadow: 0 12px 28px rgba(168, 214, 48, 0.45);
 }
 
-.price-amount {
-  display: block;
-  font-weight: 800;
-  font-size: clamp(40px, 4.5vw, 56px);
-  letter-spacing: -0.05em;
-  line-height: 1;
-  margin: 8px 0 6px;
-}
-
-.price-amount span {
-  font-size: 0.4em;
-  letter-spacing: 0;
-  margin-right: 2px;
-}
-
-.price-note {
-  color: var(--muted);
-  font-weight: 700;
-  font-size: 14px;
-}
-
-.yes {
-  color: var(--green);
-  font-weight: 800;
-  font-size: 14px;
-}
-
-.price-table .btn {
-  margin-inline: auto;
+.offer-cta:hover {
+  filter: brightness(1.04);
 }
 
 .faq-item + .faq-item {
@@ -839,6 +849,14 @@ button:focus-visible {
   .section-copy .btn {
     width: 100%;
     justify-content: space-between;
+  }
+
+  .offer {
+    padding: 28px 18px 24px;
+  }
+
+  .offer-grid {
+    grid-template-columns: 1fr;
   }
 
   .trust-pill {

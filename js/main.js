@@ -1,5 +1,4 @@
-// Troque por o link de checkout quando a oferta estiver no ar.
-const CHECKOUT_URL = "#precos";
+const CHECKOUT_URL = "https://pay.kiwify.com.br/0c72X1o";
 
 const header = document.querySelector(".site-header");
 const toggle = document.querySelector(".nav-toggle");
@@ -8,6 +7,8 @@ const toggleLabel = toggle.querySelector(".sr-only");
 
 document.querySelectorAll("[data-checkout]").forEach((link) => {
   link.setAttribute("href", CHECKOUT_URL);
+  link.setAttribute("target", "_blank");
+  link.setAttribute("rel", "noopener noreferrer");
 });
 
 function onScroll() {
