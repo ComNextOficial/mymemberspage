@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" fill="none">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="58%" r="42%">
+      <stop offset="0%" stop-color="#3dff7a" stop-opacity="0.42"/>
+      <stop offset="70%" stop-color="#3dff7a" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#3dff7a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7fafc"/>
+      <stop offset="42%" stop-color="#c5ced8"/>
+      <stop offset="100%" stop-color="#7c8796"/>
+    </linearGradient>
+    <linearGradient id="metalSheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2838"/>
+      <stop offset="100%" stop-color="#0c141e"/>
+    </linearGradient>
+    <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dffab"/>
+      <stop offset="100%" stop-color="#14994a"/>
+    </linearGradient>
+    <linearGradient id="lockBody" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2a3544"/>
+      <stop offset="55%" stop-color="#10161f"/>
+      <stop offset="100%" stop-color="#070b10"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="22" stdDeviation="18" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+    <filter id="keyGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <ellipse cx="430" cy="470" rx="250" ry="180" fill="url(#glow)"/>
+
+  <g filter="url(#shadow)" transform="rotate(-16 250 500)">
+    <rect x="90" y="400" width="320" height="200" rx="22" fill="url(#metal)"/>
+    <rect x="90" y="400" width="320" height="200" rx="22" fill="url(#metalSheen)"/>
+    <rect x="118" y="448" width="52" height="40" rx="8" fill="#8e99a8" opacity="0.55"/>
+    <rect x="126" y="456" width="36" height="24" rx="4" fill="#dfe6ee" opacity="0.35"/>
+  </g>
+
+  <g filter="url(#shadow)" transform="rotate(8 560 250)">
+    <rect x="400" y="130" width="300" height="210" rx="26" fill="url(#glass)" stroke="#3dff7a" stroke-opacity="0.55" stroke-width="1.5"/>
+    <path d="M432 292c42 0 52-62 96-74 40-12 52-48 140-78v112H432V292z" fill="url(#chartFill)"/>
+    <path d="M432 292c42 0 52-62 96-74 40-12 52-48 140-78" stroke="#eaffe8" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="668" cy="140" r="5" fill="#3dff7a"/>
+  </g>
+
+  <g filter="url(#shadow)" transform="translate(268 292)">
+    <path d="M78 92V62c0-28 22-50 50-50s50 22 50 50v30" stroke="#e8eef5" stroke-width="16" stroke-linecap="round"/>
+    <path d="M86 92V64c0-22 18-40 42-40s42 18 42 40v28" stroke="#9aa6b4" stroke-width="6" stroke-linecap="round" opacity="0.45"/>
+    <rect x="42" y="92" width="172" height="138" rx="28" fill="url(#lockBody)" stroke="#3dff7a" stroke-opacity="0.65" stroke-width="1.5"/>
+    <path d="M128 132c12 0 20 8 20 18 0 8-5 14-12 17l-6 28h-16l6-28c-7-3-12-9-12-17 0-10 8-18 20-18z" fill="#3dff7a" filter="url(#keyGlow)"/>
+    <ellipse cx="128" cy="104" rx="46" ry="10" fill="#ffffff" opacity="0.08"/>
+  </g>
+
+  <g opacity="0.9">
+    <polygon points="150,250 168,262 150,274 132,262" fill="#1c2836" stroke="#3dff7a" stroke-opacity="0.7"/>
+    <polygon points="640,470 656,480 640,490 624,480" fill="#121a24" stroke="#9aa6b8" stroke-opacity="0.5"/>
+  </g>
+</svg>
